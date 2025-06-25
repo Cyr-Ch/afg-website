@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI for Good Munich Hub - Empowering 18-30 year-olds to build AI solutions for the SDGs">
+    <title>AI for Good | Munich Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="AI for Good Munich Hub" class="logo-img">
+                    </a>
+                </div>
+                <nav class="nav desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="programs.html" class="nav-link">Programs & Events</a></li>
+                        <li><a href="impact.html" class="nav-link">Impact</a></li>
+                        <li><a href="news.html" class="nav-link">News & Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#join" class="btn btn-primary">Join Us</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                <li><a href="programs.html" class="mobile-nav-link">Programs & Events</a></li>
+                <li><a href="impact.html" class="mobile-nav-link">Impact</a></li>
+                <li><a href="news.html" class="mobile-nav-link">News & Blog</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <!-- Placeholder: Full-screen image of Munich meetup with diverse young professionals networking, teal color overlay -->
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">AI for Good | Munich Hub</h1>
+                <p class="hero-subtitle">Empowering 18–30 year‐olds to build AI solutions for the SDGs</p>
+                <a href="#join" class="btn btn-primary btn-large">Join Our Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do section">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="grid three-columns">
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- Placeholder: Icon representing community/networking -->
+                        <img src="placeholder-community-icon.svg" alt="Community Building">
+                    </div>
+                    <h3 class="card-title">Community Building</h3>
+                    <p class="card-description">Connect, collaborate, and amplify young voices in AI.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- Placeholder: Icon representing innovation/lab/lightbulb -->
+                        <img src="placeholder-innovation-icon.svg" alt="Innovation Labs">
+                    </div>
+                    <h3 class="card-title">Innovation Labs</h3>
+                    <p class="card-description">Prototype solutions tackling climate, health & education.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- Placeholder: Icon representing global stage/world -->
+                        <img src="placeholder-global-icon.svg" alt="Global Stage">
+                    </div>
+                    <h3 class="card-title">Global Stage</h3>
+                    <p class="card-description">Showcase at WEF, AI House Davos, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Timeline Section -->
+    <section class="impact-timeline section">
+        <div class="container">
+            <h2 class="section-title">Our Impact Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Spring 2023</h3>
+                        <p class="timeline-description">Hub founded</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Oct 2023/24</h3>
+                        <p class="timeline-description">Oktoberfest meetups</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Jan 2024/25</h3>
+                        <p class="timeline-description">Delegations to AI House Davos</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Jun 2025</h3>
+                        <p class="timeline-description">Officially part of AI for Good</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="project-card">
+                        <!-- Placeholder: Screenshot of climate AI project dashboard -->
+                        <img src="placeholder-project1.jpg" alt="Climate AI Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Climate AI Monitor</h3>
+                            <p class="project-description">Real-time environmental data analysis for sustainable city planning.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <!-- Placeholder: Screenshot of healthcare AI application -->
+                        <img src="placeholder-project2.jpg" alt="Healthcare AI Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Health Access AI</h3>
+                            <p class="project-description">Improving healthcare accessibility in underserved communities.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <!-- Placeholder: Screenshot of education AI platform -->
+                        <img src="placeholder-project3.jpg" alt="Education AI Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">EduBridge AI</h3>
+                            <p class="project-description">Personalized learning experiences for students with disabilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev" aria-label="Previous project">&larr;</button>
+                <button class="carousel-btn carousel-next" aria-label="Next project">&rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved section" id="join">
+        <div class="container">
+            <h2 class="section-title">Get Involved</h2>
+            <div class="grid two-columns">
+                <div class="involvement-card">
+                    <h3 class="card-title">Become a Member</h3>
+                    <ul class="benefits-list">
+                        <li>Access to exclusive workshops and events</li>
+                        <li>Mentorship from AI industry leaders</li>
+                        <li>Opportunity to pitch at global conferences</li>
+                        <li>Collaborative project development</li>
+                        <li>Networking with like-minded innovators</li>
+                    </ul>
+                    <a href="contact.html?type=membership" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="involvement-card">
+                    <h3 class="card-title">Host an Event</h3>
+                    <p class="card-description">Partner with us to organize impactful AI events in Munich. From technical workshops to community panels, we're always looking for collaborative opportunities.</p>
+                    <a href="contact.html?type=partnership" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners section">
+        <div class="container">
+            <h2 class="section-title">Partners & Sponsors</h2>
+            <div class="partners-grid">
+                <!-- Placeholder: AI for Good logo -->
+                <img src="placeholder-aiforgood-logo.png" alt="AI for Good" class="partner-logo">
+                <!-- Placeholder: Technical University of Munich logo -->
+                <img src="placeholder-tum-logo.png" alt="Technical University of Munich" class="partner-logo">
+                <!-- Placeholder: Munich startup ecosystem logo -->
+                <img src="placeholder-startup-logo.png" alt="Munich Startup Ecosystem" class="partner-logo">
+                <!-- Placeholder: Industry partner logo -->
+                <img src="placeholder-industry-logo.png" alt="Industry Partner" class="partner-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <p class="footer-text">
+                        <a href="mailto:munichhub.youngaileaders@gmail.com">munichhub.youngaileaders@gmail.com</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <!-- Placeholder: LinkedIn icon -->
+                            <img src="placeholder-linkedin-icon.svg" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <!-- Placeholder: Twitter/X icon -->
+                            <img src="placeholder-twitter-icon.svg" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <!-- Placeholder: Instagram icon -->
+                            <img src="placeholder-instagram-icon.svg" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Code of Conduct</a></li>
+                        <li><a href="https://aiforgood.itu.int" class="footer-link">AI for Good</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 AI for Good – Munich Hub</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html> 

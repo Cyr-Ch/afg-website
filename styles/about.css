@@ -1,0 +1,577 @@
+/* === ABOUT PAGE STYLES === */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-teal) 100%);
+    color: var(--white);
+    padding: var(--spacing-xxl) 0 var(--spacing-xl);
+    margin-top: 70px; /* Account for fixed header */
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    background-color: var(--bg-off-white);
+}
+
+.mission-card,
+.vision-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    height: 100%;
+}
+
+.mission-card .card-title {
+    color: var(--secondary-teal);
+}
+
+.vision-card .card-title {
+    color: var(--primary-navy);
+}
+
+.mission-points {
+    list-style: none;
+    margin-top: var(--spacing-lg);
+}
+
+.mission-points li {
+    position: relative;
+    padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-lg);
+    color: var(--text-light);
+}
+
+.mission-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-teal);
+    font-weight: bold;
+}
+
+.vision-stats {
+    margin-top: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--bg-off-white);
+    border-radius: var(--radius-md);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    font-family: var(--font-heading);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Team Section */
+.team {
+    background-color: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.team-member {
+    background-color: var(--bg-off-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-md);
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-md);
+    background-color: var(--bg-light-gray);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><rect width="150" height="150" fill="%23E5E5E5"/><circle cx="75" cy="60" r="25" fill="%237F8C8D"/><ellipse cx="75" cy="120" rx="35" ry="25" fill="%237F8C8D"/></svg>');
+    background-size: cover;
+}
+
+.team-name {
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-xs);
+}
+
+.team-role {
+    color: var(--secondary-teal);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-bio {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.team-social .social-link {
+    width: 35px;
+    height: 35px;
+    background-color: var(--secondary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast);
+}
+
+.team-social .social-link:hover {
+    background-color: var(--primary-navy);
+}
+
+.team-social .social-link img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Global Network Section */
+.global-network {
+    background-color: var(--bg-light-gray);
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.network-map {
+    position: relative;
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    background-color: var(--bg-light-gray);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23E5E5E5"/><text x="400" y="200" text-anchor="middle" dy=".3em" font-family="Arial" font-size="20" fill="%237F8C8D">Interactive World Map</text></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.map-overlay {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    right: var(--spacing-lg);
+    bottom: var(--spacing-lg);
+}
+
+.hub-marker {
+    position: absolute;
+    cursor: pointer;
+}
+
+.marker-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondary-teal);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-fast);
+}
+
+.marker-dot.active {
+    background-color: var(--accent-gold);
+    transform: scale(1.3);
+}
+
+.marker-dot:hover {
+    transform: scale(1.2);
+}
+
+.marker-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    pointer-events: none;
+}
+
+.hub-marker:hover .marker-label {
+    opacity: 1;
+}
+
+.network-stats {
+    margin-top: var(--spacing-xl);
+}
+
+.stat-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-card .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-teal);
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-card .stat-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Global Initiatives Section */
+.initiatives {
+    background-color: var(--bg-off-white);
+}
+
+.initiatives-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.section-subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+}
+
+.initiative-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.initiative-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 183, 149, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.initiative-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--secondary-teal);
+}
+
+.initiative-card:hover::before {
+    left: 100%;
+}
+
+.initiative-card:hover .initiative-icon {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--accent-gold);
+}
+
+.initiative-card:hover .initiative-title {
+    color: var(--secondary-teal);
+    transform: translateY(-2px);
+}
+
+.initiative-card:hover .initiative-description {
+    color: var(--text-dark);
+}
+
+.initiative-card:active {
+    transform: translateY(-6px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+/* Add a subtle animation when cards come into view */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.initiative-card {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+.initiative-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.initiative-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.initiative-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.initiative-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--spacing-md);
+    background-color: var(--secondary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.initiative-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: var(--white);
+}
+
+.initiative-title {
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.initiative-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Values Section */
+.values {
+    background-color: var(--white);
+}
+
+.values .grid {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.value-card {
+    background-color: var(--bg-off-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    align-self: stretch;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    background-color: var(--secondary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.value-icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.value-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--white);
+}
+
+.value-title {
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.value-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .vision-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .network-stats .four-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-card .stat-number {
+        font-size: 2rem;
+    }
+    
+    .initiatives-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .initiative-card {
+        width: 300px;
+        height: 300px;
+        max-width: 90%;
+    }
+    
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .marker-label {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .network-stats .four-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        padding: var(--spacing-sm);
+    }
+} 
