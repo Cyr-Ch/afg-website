@@ -292,8 +292,6 @@
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     background-color: var(--white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
