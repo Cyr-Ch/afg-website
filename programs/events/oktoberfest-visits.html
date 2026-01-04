@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover upcoming events, workshops, and programs at AI for Good Munich Hub">
-    <title>Programs & Events | Young AI Leaders Munich Hub</title>
+    <meta name="description" content="Young AI Leaders Munich Hub Oktoberfest visits and community celebration">
+    <title>Oktoberfest Visits | Young AI Leaders Munich Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/programs.css">
 </head>
-<body class="programs-page">
-    <!-- Header -->
+<body class="event-page oktoberfest-page">
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -32,7 +31,7 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <a href="contact.html?type=membership" class="btn btn-primary">Join Us</a>
+                    <a href="https://aiforgood.itu.int/young-ai-leaders-community/" class="btn btn-primary" target="_blank" rel="noopener">Apply Now</a>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu">
                         <span></span>
                         <span></span>
@@ -41,7 +40,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Navigation -->
         <nav class="mobile-nav">
             <ul class="mobile-nav-list">
                 <li><a href="index.html" class="mobile-nav-link">Home</a></li>
@@ -54,52 +52,34 @@
         </nav>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Programs & Events</h1>
-            <p class="page-subtitle">Current highlights from the Munich Hub and how you can stay involved.</p>
-        </div>
-    </section>
-
-    <section class="programs-showcase section">
-        <div class="container">
-            <div class="section-intro">
-                <p>We curate deep-dive engagements with policymakers, global innovators, and the wider Young AI Leaders community. Browse the latest convenings and mark your calendar for what’s next.</p>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Oktoberfest Visits</h1>
+                <p class="page-subtitle">Celebrating Munich culture with our community through Lederhosen, Lebkuchenherz, and collaborative conversations.</p>
             </div>
-            <div class="programs-grid">
-                <article class="program-card card">
-                    <a class="program-card-link" href="programs/events/roundtable-2025.html" aria-label="View details for AI House Davos Roundtable 2025">
-                        <div class="program-card-header">
-                            <span class="program-meta">Jan 2025 · AI House Davos</span>
-                            <h3 class="program-title">AI House Davos Roundtable 2025</h3>
-                        </div>
-                        <p class="program-summary">Rising innovators met during WEF to align on climate, health, and governance-ready agendas.</p>
-                    </a>
-                </article>
-                <article class="program-card card">
-                    <a class="program-card-link" href="programs/events/davos-visit-2024.html" aria-label="View details for YAIL Delegation to Davos 2024">
-                        <div class="program-card-header">
-                            <span class="program-meta">Jan 2024 · Davos</span>
-                            <h3 class="program-title">YAIL Delegation to Davos 2024</h3>
-                        </div>
-                        <p class="program-summary">15+ Munich Hub members joined Davos 2024 to contribute youth perspectives.</p>
-                    </a>
-                </article>
-                <article class="program-card card">
-                    <a class="program-card-link" href="programs/events/oktoberfest-visits.html" aria-label="View details for Oktoberfest visits">
-                        <div class="program-card-header">
-                            <span class="program-meta">Oct 2023 · 2024 · 2025</span>
-                            <h3 class="program-title">Oktoberfest Visits & Save-the-Date</h3>
-                        </div>
-                        <p class="program-summary">We celebrate Oktoberfest together to welcome new members and share Munich traditions.</p>
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section class="programs-showcase section">
+            <div class="container event-content">
+                <h2>2023/24 highlights</h2>
+                <p>Oktoberfest is the hub’s favorite cultural lab. We share Lebkuchenherz, swap stories in Bavarian, and return to the workweek buzzing from spontaneous coaching sessions sparked by full steins and bright conversations.</p>
+                <p>This seasonal rhythm keeps the Munich Hub tight: new members meet mentors, existing friendships strengthen, and we celebrate that spending time together in the Wiesn tent keeps our energy high for the AI work ahead.</p>
+                        <div class="image-slider" data-slider>
+                            <button class="slider-btn prev" aria-label="Previous photo">‹</button>
+                            <div class="slider-track">
+                                <img src="../../assets/images/wiesn-2024/1728298600355.jpg" alt="Munich Hub group photo at Oktoberfest 2024">
+                                <img src="../../assets/images/wiesn-2024/1728298601922.jpg" alt="Lebkuchenherz shared by the community">
+                                <img src="../../assets/images/wiesn-2024/1733412615459.jpg" alt="Members enjoying Oktoberfest 2024 traditions">
+                                <img src="../../assets/images/wiesn-2024/1728298599994.jpg" alt="Young AI Leaders celebrating at Wiesn 2024">
+                            </div>
+                            <button class="slider-btn next" aria-label="Next photo">›</button>
+                        </div>
+                        <a href="../programs.html" class="btn btn-outline">Back to Programs</a>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -144,6 +124,9 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/home.js"></script>
+    <script src="../../scripts/gallery.js"></script>
 </body>
-</html> 
+</html>
+

@@ -121,6 +121,32 @@ a:hover {
     color: var(--primary-navy);
 }
 
+.impact-page .page-header,
+.news-page .page-header {
+    padding-top: 160px;
+}
+
+.impact-page main,
+.news-page main {
+    padding-top: 220px;
+}
+
+.contact-page .page-header {
+    padding-top: 160px;
+}
+
+.contact-page main {
+    padding-top: 220px;
+}
+
+.about-page .page-header {
+    padding-top: 160px;
+}
+
+.about-page main {
+    padding-top: 220px;
+}
+
 /* === GRID SYSTEM === */
 .grid {
     display: grid;
@@ -242,9 +268,9 @@ a:hover {
 }
 
 .logo-img {
-    height: 50px;
+    height: 100px;
     width: auto;
-    max-width: 180px;
+    max-width: 250px;
 }
 
 .desktop-nav {
@@ -262,7 +288,13 @@ a:hover {
     margin: 0;
     padding: 0;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.nav-list::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-link {
