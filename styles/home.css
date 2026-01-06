@@ -3,9 +3,9 @@
 /* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 550px;
-    max-height: 900px;
+    height: 100vh;
+    min-height: 650px;
+    max-height: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
