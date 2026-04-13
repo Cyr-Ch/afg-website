@@ -191,6 +191,22 @@
         </div>
     </section>
 
+    <!-- Munich Hub Application Section -->
+    <section class="munich-hub-application section" id="munich-hub-application">
+        <div class="container">
+            <div class="application-cta">
+                <h2 class="section-title">Amplify your voice, drive the future</h2>
+                <p class="application-cta-text">
+                    Together, we’re building a future where every voice has the power to make a difference.
+                </p>
+                <p class="application-cta-text">Want to be part of the community?</p>
+                <button type="button" class="btn btn-primary btn-large" id="open-application-modal">
+                    Apply to join the Munich Hub
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Get Involved Section -->
     <section class="get-involved section" id="join">
         <div class="container">
@@ -205,7 +221,7 @@
                         <li>Collaborative project development</li>
                         <li>Networking with like-minded innovators</li>
                     </ul>
-                    <a href="https://aiforgood.itu.int/young-ai-leaders-community/" class="btn btn-primary" target="_blank" rel="noopener">Apply Now</a>
+                    <button type="button" class="btn btn-primary open-application-modal">Apply Now</button>
                 </div>
                 <div class="involvement-card">
                     <h3 class="card-title">Host an Event</h3>
@@ -215,6 +231,89 @@
             </div>
         </div>
     </section>
+
+    <div class="application-modal" id="application-modal" aria-hidden="true">
+        <div class="application-modal-backdrop" data-close-modal></div>
+        <div class="application-modal-content" role="dialog" aria-modal="true" aria-labelledby="application-modal-title">
+            <button type="button" class="application-modal-close" id="close-application-modal" aria-label="Close application form">
+                ×
+            </button>
+            <h2 id="application-modal-title">Apply to join the Munich hub</h2>
+            <p>
+                Are you ready to make a meaningful impact with AI by joining our global youth community? To apply you are expected to:
+            </p>
+            <ul class="application-requirements">
+                <li>You must be between 18 and 30 years old (at the time of application) to apply.</li>
+                <li>Commit to the community for 4 years.</li>
+                <li>You must reside in the city of your hub to ensure active and effective participation.</li>
+                <li>Actively engage in hub project(s) and participate in AI for Good project(s) annually.</li>
+                <li>Contribute to our vision of harnessing AI for social good.</li>
+                <li>Demonstrate responsibility by fulfilling your role and adhering to the Community Charter.</li>
+                <li>Align all your actions and projects with solving the global challenges.</li>
+            </ul>
+
+            <form id="munich-application-form" class="application-form" novalidate>
+                <div class="application-form-grid">
+                    <div class="form-group">
+                        <label for="app-name" class="form-label">Name:</label>
+                        <input type="text" id="app-name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-surname" class="form-label">Surname:</label>
+                        <input type="text" id="app-surname" name="surname" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="application-form-grid">
+                    <div class="form-group">
+                        <label for="app-age" class="form-label">Age:</label>
+                        <input type="text" id="app-age" name="birthDate" class="form-input" placeholder="dd.mm.yyyy" pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-gender" class="form-label">Gender:</label>
+                        <input type="text" id="app-gender" name="gender" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="app-email" class="form-label">Email (Personal, not institutional/company):</label>
+                    <input type="email" id="app-email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="app-cv" class="form-label">Please submit your CV* (PDF only)</label>
+                    <input type="file" id="app-cv" name="cv" class="form-input" accept="application/pdf" required>
+                </div>
+
+                <p class="application-questions-intro">
+                    Please answer the following questions to help us understand your motivations and capabilities.
+                    Each response should be a minimum of 300 words.
+                </p>
+
+                <div class="form-group">
+                    <label for="app-motivation" class="form-label">Why are you interested in joining the Young AI Leaders Community?</label>
+                    <textarea id="app-motivation" name="motivation" class="form-textarea application-answer" rows="8" required></textarea>
+                    <p class="word-counter" data-counter-for="app-motivation">0 words (minimum 300)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="app-interest" class="form-label">What area of AI interests you, and why?</label>
+                    <textarea id="app-interest" name="aiInterest" class="form-textarea application-answer" rows="8" required></textarea>
+                    <p class="word-counter" data-counter-for="app-interest">0 words (minimum 300)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="app-contribution" class="form-label">What can you bring to the community?</label>
+                    <textarea id="app-contribution" name="communityContribution" class="form-textarea application-answer" rows="8" required></textarea>
+                    <p class="word-counter" data-counter-for="app-contribution">0 words (minimum 300)</p>
+                </div>
+
+                <div id="application-form-message" class="application-form-message" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn-primary btn-large" id="submit-application-button">Apply</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -261,6 +360,7 @@
         </div>
     </footer>
 
+    <script src="scripts/config.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/home.js"></script>
 </body>
