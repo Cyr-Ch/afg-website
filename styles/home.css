@@ -296,36 +296,45 @@
 
 .application-modal-content {
     position: relative;
-    max-width: 900px;
-    max-height: 90vh;
+    width: min(960px, calc(100vw - 2rem));
+    max-height: 92vh;
     overflow-y: auto;
-    margin: 5vh auto;
+    margin: 4vh auto;
     background: var(--white);
-    border-radius: var(--radius-lg);
+    border-radius: 18px;
     box-shadow: var(--shadow-lg);
-    padding: calc(var(--spacing-xl) + 0.5rem);
+    padding: clamp(1.25rem, 2vw, 2rem);
     color: var(--text-dark);
 }
 
 .application-modal-close {
     position: absolute;
-    top: var(--spacing-sm);
-    right: var(--spacing-sm);
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
     border: none;
-    background: transparent;
+    background: #f2f4f8;
     color: var(--primary-navy);
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.application-modal-close:hover {
+    background: #e5e9f1;
+    transform: scale(1.04);
 }
 
 .application-requirements {
-    margin: var(--spacing-md) 0 var(--spacing-xl);
+    margin: var(--spacing-sm) 0 var(--spacing-lg);
     padding: var(--spacing-md) var(--spacing-lg);
-    padding-left: calc(var(--spacing-lg) + 0.25rem);
-    border-radius: var(--radius-md);
-    background: var(--bg-off-white);
-    border: 1px solid var(--bg-light-gray);
+    padding-left: calc(var(--spacing-lg) + 0.4rem);
+    border-radius: 12px;
+    background: linear-gradient(180deg, #f7fbfa 0%, #f3f6fa 100%);
+    border: 1px solid #dde7ed;
     color: var(--text-light);
     line-height: 1.7;
 }
@@ -335,8 +344,9 @@
 }
 
 .application-modal-content h2 {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--primary-navy);
+    padding-right: 2.75rem;
 }
 
 .application-modal-content > p {
@@ -346,53 +356,120 @@
 }
 
 .application-form {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.application-section-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: clamp(1rem, 2.2vw, 1.5rem);
+    box-shadow: 0 8px 24px rgba(30, 42, 71, 0.06);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 }
 
+.application-section-title {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary-navy);
+}
+
 .application-form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+    gap: 1rem 1.25rem;
 }
 
 .application-questions-intro {
-    font-weight: 500;
-    margin: var(--spacing-sm) 0;
+    font-weight: 400;
+    margin: 0;
     color: var(--primary-navy);
-    background: rgba(58, 183, 149, 0.1);
+    background: rgba(58, 183, 149, 0.08);
     border-left: 4px solid var(--secondary-teal);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 0.85rem 1rem;
     border-radius: var(--radius-sm);
+    line-height: 1.6;
 }
 
 .application-form .form-group {
-    margin-bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
 }
 
 .application-form .form-label {
-    margin-bottom: 0.6rem;
     font-weight: 600;
     color: var(--primary-navy);
+    font-size: 0.94rem;
 }
 
 .application-form .form-input,
 .application-form .form-textarea {
-    padding: 0.9rem 1rem;
-    border-width: 1.5px;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #ccd6e3;
+    border-radius: 10px;
+    background: #fcfdff;
+    font-size: 0.98rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.application-form .form-input:focus,
+.application-form .form-textarea:focus {
+    border-color: var(--secondary-teal);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(58, 183, 149, 0.15);
+    outline: none;
+}
+
+.application-form select.form-input {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #5a667a 50%),
+        linear-gradient(135deg, #5a667a 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) calc(50% - 3px),
+        calc(100% - 12px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem;
 }
 
 .application-form .form-textarea {
-    min-height: 180px;
+    min-height: 170px;
     line-height: 1.6;
+    resize: vertical;
+}
+
+.application-form input[type="file"].form-input {
+    min-height: unset;
+    padding: 0.7rem 0.8rem;
+    cursor: pointer;
+}
+
+.application-form input[type="file"].form-input::file-selector-button {
+    margin-right: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-navy);
+    color: var(--white);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
 }
 
 .word-counter {
-    margin-top: var(--spacing-xs);
-    color: var(--text-light);
-    font-size: 0.875rem;
+    margin-top: 0.15rem;
+    color: #6f7b8f;
+    font-size: 0.82rem;
 }
 
 .word-counter.invalid {
@@ -401,9 +478,8 @@
 
 .application-form-message {
     display: none;
-    padding: var(--spacing-sm);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-md);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
     font-size: 0.95rem;
 }
 
@@ -421,10 +497,15 @@
     border: 1px solid #afe6d4;
 }
 
+.application-submit-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
 #submit-application-button {
-    align-self: flex-start;
-    margin-top: var(--spacing-sm);
-    min-width: 160px;
+    align-self: flex-end;
+    min-width: 180px;
 }
 
 
@@ -568,17 +649,23 @@
     .application-modal-content {
         margin: 2vh auto;
         max-height: 96vh;
-        padding: var(--spacing-lg);
+        width: calc(100vw - 1rem);
+        padding: var(--spacing-md);
+    }
+
+    .application-section-card {
+        padding: var(--spacing-md);
     }
 
     .application-form-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: 0.85rem;
     }
 
     #submit-application-button {
         width: 100%;
         align-self: stretch;
+        min-width: 0;
     }
     
     .partners-grid {
