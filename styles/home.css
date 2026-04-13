@@ -303,7 +303,7 @@
     background: var(--white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    padding: var(--spacing-xl);
+    padding: calc(var(--spacing-xl) + 0.5rem);
     color: var(--text-dark);
 }
 
@@ -320,24 +320,73 @@
 }
 
 .application-requirements {
-    margin: var(--spacing-md) 0 var(--spacing-lg);
-    padding-left: 1.25rem;
+    margin: var(--spacing-md) 0 var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    padding-left: calc(var(--spacing-lg) + 0.25rem);
+    border-radius: var(--radius-md);
+    background: var(--bg-off-white);
+    border: 1px solid var(--bg-light-gray);
     color: var(--text-light);
+    line-height: 1.7;
+}
+
+.application-requirements li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.application-modal-content h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-navy);
+}
+
+.application-modal-content > p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-light);
+    line-height: 1.7;
 }
 
 .application-form {
     margin-top: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
 .application-form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 
 .application-questions-intro {
     font-weight: 500;
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-sm) 0;
+    color: var(--primary-navy);
+    background: rgba(58, 183, 149, 0.1);
+    border-left: 4px solid var(--secondary-teal);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+}
+
+.application-form .form-group {
+    margin-bottom: 0;
+}
+
+.application-form .form-label {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.application-form .form-input,
+.application-form .form-textarea {
+    padding: 0.9rem 1rem;
+    border-width: 1.5px;
+}
+
+.application-form .form-textarea {
+    min-height: 180px;
+    line-height: 1.6;
 }
 
 .word-counter {
@@ -370,6 +419,12 @@
     background: #e8f8f3;
     color: #116449;
     border: 1px solid #afe6d4;
+}
+
+#submit-application-button {
+    align-self: flex-start;
+    margin-top: var(--spacing-sm);
+    min-width: 160px;
 }
 
 
@@ -518,6 +573,12 @@
 
     .application-form-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    #submit-application-button {
+        width: 100%;
+        align-self: stretch;
     }
     
     .partners-grid {

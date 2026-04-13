@@ -266,12 +266,17 @@
 
                 <div class="application-form-grid">
                     <div class="form-group">
-                        <label for="app-age" class="form-label">Age:</label>
-                        <input type="text" id="app-age" name="birthDate" class="form-input" placeholder="dd.mm.yyyy" pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$" required>
+                        <label for="app-birthdate" class="form-label">Birthdate:</label>
+                        <input type="date" id="app-birthdate" name="birthDate" class="form-input" required>
                     </div>
                     <div class="form-group">
                         <label for="app-gender" class="form-label">Gender:</label>
-                        <input type="text" id="app-gender" name="gender" class="form-input" required>
+                        <select id="app-gender" name="gender" class="form-input" required>
+                            <option value="">Select gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                 </div>
 

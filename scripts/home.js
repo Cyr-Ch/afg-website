@@ -186,11 +186,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function parseBirthDate(input) {
-        const datePattern = /^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$/;
+        const datePattern = /^\d{4}-\d{2}-\d{2}$/;
         if (!datePattern.test(input)) {
             return null;
         }
-        const [day, month, year] = input.split('.').map(Number);
+        const [year, month, day] = input.split('-').map(Number);
         const date = new Date(year, month - 1, day);
         if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
             return null;
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (!parsedBirthDate) {
-                setFormMessage('error', 'Please enter age as a valid birth date in dd.mm.yyyy format.');
+                setFormMessage('error', 'Please select your birthdate using the date picker.');
                 return;
             }
 
