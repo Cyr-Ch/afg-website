@@ -65,6 +65,7 @@ async function uploadFileToGitHub({ owner, repo, branch, token, path, contentBas
         headers: {
             Authorization: `Bearer ${token}`,
             Accept: 'application/vnd.github+json',
+            'User-Agent': 'afg-munich-applications-api',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({

@@ -1,3 +1,9 @@
 name = "afg-munich-applications-api"
 main = "worker.js"
 compatibility_date = "2026-04-13"
+
+[vars]
+ALLOWED_ORIGIN = "https://cyr-ch.github.io"
+GITHUB_BRANCH = "main"
+GITHUB_OWNER = "Cyr-Ch"
+GITHUB_REPO = "afg-website"

@@ -100,6 +100,7 @@ async function githubRequest(env, path, method = 'GET', body) {
         headers: {
             Authorization: `Bearer ${env.GITHUB_TOKEN}`,
             Accept: 'application/vnd.github+json',
+            'User-Agent': 'afg-munich-applications-api',
             'Content-Type': 'application/json'
         },
         body: body ? JSON.stringify(body) : undefined
@@ -127,6 +128,7 @@ async function uploadToGithub(env, path, contentBase64, message) {
         headers: {
             Authorization: `Bearer ${env.GITHUB_TOKEN}`,
             Accept: 'application/vnd.github+json',
+            'User-Agent': 'afg-munich-applications-api',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)

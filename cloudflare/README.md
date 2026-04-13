@@ -30,6 +30,12 @@ Set non-secret vars in Cloudflare dashboard (Worker settings -> Variables):
 - `GITHUB_BRANCH` (optional, defaults to `main`)
 - `ALLOWED_ORIGIN` (your GitHub Pages origin)
 
+For local `wrangler dev`, copy `.dev.vars.example` to `.dev.vars` and fill secret values:
+
+```bash
+cp .dev.vars.example .dev.vars
+```
+
 ## 3) Deploy
 
 ```bash

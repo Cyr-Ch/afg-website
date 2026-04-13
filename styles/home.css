@@ -385,6 +385,10 @@
     gap: 1rem 1.25rem;
 }
 
+.application-form-grid > * {
+    min-width: 0;
+}
+
 .application-questions-intro {
     font-weight: 400;
     margin: 0;
@@ -403,15 +407,25 @@
     gap: 0.45rem;
 }
 
+.application-field {
+    width: 100%;
+    align-items: flex-start;
+}
+
 .application-form .form-label {
+    display: block;
+    width: 100%;
     font-weight: 600;
     color: var(--primary-navy);
     font-size: 0.94rem;
+    line-height: 1.35;
 }
 
 .application-form .form-input,
 .application-form .form-textarea {
-    width: 100%;
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
     min-height: 48px;
     padding: 0.75rem 0.9rem;
     border: 1px solid #ccd6e3;
@@ -443,6 +457,8 @@
 }
 
 .application-form .form-textarea {
+    display: block;
+    width: 100% !important;
     min-height: 170px;
     line-height: 1.6;
     resize: vertical;
