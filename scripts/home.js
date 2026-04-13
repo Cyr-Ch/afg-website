@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
         applicationModal.classList.add('is-open');
         applicationModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        const firstInput = applicationForm ? applicationForm.querySelector('input, textarea') : null;
+        if (firstInput) {
+            firstInput.focus();
+        }
     }
 
     function closeApplicationModal() {
@@ -143,6 +147,9 @@ document.addEventListener('DOMContentLoaded', function() {
         applicationModal.classList.remove('is-open');
         applicationModal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (window.location.hash === '#apply-now') {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
     }
 
     function setFormMessage(type, text) {
@@ -215,7 +222,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     openApplicationButtons.forEach(button => {
-        button.addEventListener('click', openApplicationModal);
+        button.addEventListener('click', event => {
+            event.preventDefault();
+            openApplicationModal();
+            if (window.location.hash !== '#apply-now') {
+                history.replaceState(null, '', '#apply-now');
+            }
+        });
     });
 
     if (closeApplicationButton) {
@@ -231,6 +244,10 @@ document.addEventListener('DOMContentLoaded', function() {
             closeApplicationModal();
         }
     });
+
+    if (window.location.hash === '#apply-now') {
+        openApplicationModal();
+    }
 
     answerFields.forEach(textarea => {
         updateWordCounter(textarea);
